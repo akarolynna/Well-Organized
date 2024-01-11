@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Well Organized</title>
 </head>
 
@@ -18,7 +20,6 @@
                 </ul>
                 <ul class="links">
                     <li>A fazer</li>
-
                     <li>Arquivadoras</li>
                 </ul>
             </nav>
@@ -31,9 +32,45 @@
                 </button>
                 <span>Adicionar Tarefa</span>
             </div>
+            <div class="formulario" id="formulario">
+                <div class="modalCabecalho">
+                    <img src="Public/assets/check.png" alt="Task">
+                    <button type="button" class="fechar" id="fechar">X</button>
+
+                </div>
+                <h1>Adicione sua tarefa</h1>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="titulo">Nome da Tarefa:</label>
+                        <input type="text" id="titulo" class="form-control titulo"
+                            placeholder="Digite aqui o nome da tarefa &#128522;">
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição: </label>
+                        <textarea class="form-control" id="descricao" rows="3"
+                            placeholder="A vida é cheia de tarefas dirárias  que se não organizamos acabamos perdendo o prazo para realiza-las. Detalhe aqui as tarefas que você deve fazer  &#x1F4DD;"></textarea>
+                    </div>
+                    <div class="botoesCores">
+                        <label for="cor">Cor:</label>
+                        <button class="verde " id="verde"></button>
+                        <button class="rosa" id="rosa"></button>
+                        <button class="azul" id="azul"></button>
+                        <button class="laranja" id="laranja"></button>
+                        <button class="amarelo" id="amerelo"></button>
+                        <button class="roxo" id="roxo"></button>
+                    </div>
+                    <div class="divBotaoEnviar">
+                        <button type="submit" class="botaoEnviar">Add tarefa</button>
+
+                    </div>
+                </form>
+            </div>
 
         </article>
     </section>
+
+    <!-- Importando o arquivo js -->
+    <script src="Public/js/js.js"></script>
 </body>
 
 </html>
