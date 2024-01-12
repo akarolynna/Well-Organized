@@ -11,64 +11,68 @@
 </head>
 
 <body>
-    <section class="containerPrincipal">
-        <!-- Menu -->
-        <header>
-            <nav>
-                <ul class="titulo">
-                    <li> Well Organized</li>
-                </ul>
-                <ul class="links">
-                    <li>A fazer</li>
-                    <li>Arquivadoras</li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Fim do Menu -->
-        <article>
-            <div class="botao">
-                <button class="addTarefa" id="addTarefa">
-                    <img src="Public/assets/plus.png" alt="Imagem de adicionar">
-                </button>
-                <span>Adicionar Tarefa</span>
-            </div>
-            <div class="formulario" id="formulario">
-                <div class="modalCabecalho">
-                    <img src="Public/assets/check.png" alt="Task">
-                    <button type="button" class="fechar" id="fechar">X</button>
+    <!-- Menu -->
+    <header>
+        <nav>
+            <ul class="titulo">
+                <li> Well Organized</li>
+            </ul>
+            <ul class="links">
+                <li>A fazer</li>
+                <li>Arquivadoras</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fim do Menu -->
 
-                </div>
+    <article>
+        <div class="botao">
+            <button class="addTarefa" id="addTarefa">
+                <img src="Public/assets/plus.png" alt="Imagem de adicionar">
+            </button>
+            <span>Adicionar Tarefa</span>
+        </div>
+        <div class="formulario" id="formulario">
+            <div class="modalCabecalho">
                 <h1>Adicione sua tarefa</h1>
-                <form method="post">
-                    <div class="form-group">
-                        <label for="titulo">Nome da Tarefa:</label>
-                        <input type="text" id="titulo" class="form-control titulo"
-                            placeholder="Digite aqui o nome da tarefa &#128522;">
-                    </div>
-                    <div class="form-group">
-                        <label for="descricao">Descrição: </label>
-                        <textarea class="form-control" id="descricao" rows="3"
-                            placeholder="A vida é cheia de tarefas dirárias  que se não organizamos acabamos perdendo o prazo para realiza-las. Detalhe aqui as tarefas que você deve fazer  &#x1F4DD;"></textarea>
-                    </div>
-                    <div class="botoesCores">
-                        <label for="cor">Cor:</label>
-                        <button class="verde " id="verde"></button>
-                        <button class="rosa" id="rosa"></button>
-                        <button class="azul" id="azul"></button>
-                        <button class="laranja" id="laranja"></button>
-                        <button class="amarelo" id="amerelo"></button>
-                        <button class="roxo" id="roxo"></button>
-                    </div>
-                    <div class="divBotaoEnviar">
-                        <button type="submit" class="botaoEnviar">Add tarefa</button>
-
-                    </div>
-                </form>
+                <button type="button" class="fechar" id="fechar">X</button>
             </div>
 
-        </article>
-    </section>
+            <form method="post">
+                <div class="form-group">
+                    <label for="titulo">Nome da Tarefa:</label>
+                    <input type="text" id="titulo" class=" margem form-control titulo"
+                        placeholder="Digite aqui o nome da tarefa &#128522;">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição: </label>
+                    <textarea class=" margem form-control" id="descricao" rows="3"
+                        placeholder="A vida é cheia de tarefas dirárias  que se não organizamos acabamos perdendo o prazo para realiza-las. Detalhe aqui as tarefas que você deve fazer  &#x1F4DD;"></textarea>
+                </div>
+                <div class="botoesCores">
+                    <label for="cor" class="margem">Cor:</label>
+                    <button class="verde " id="verde"></button>
+                    <button class="rosa" id="rosa"></button>
+                    <button class="azul" id="azul"></button>
+                    <button class="laranja" id="laranja"></button>
+                    <button class="amarelo" id="amerelo"></button>
+                    <button class="roxo" id="roxo"></button>
+                </div>
+                <div class="divBotaoEnviar">
+                    <button type="submit" class="botaoEnviar">Add tarefa</button>
+                </div>
+            </form>
+        </div>
+        <div id="overlay" class="overlay"></div>
+        <div class="containerCards">
+            <div class="card1">
+                <div class="cabecalho">
+                    <img src="" alt="" srcset="">
+                </div>
+            </div>
 
+        </div>
+    </article>
     <!-- Importando o arquivo js -->
     <script src="Public/js/js.js"></script>
 </body>
