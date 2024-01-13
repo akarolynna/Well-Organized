@@ -106,27 +106,28 @@ article .formulario .botoesCores button {
     margin-left: 5px;
 }
 
-article .formulario .botoesCores .verde {
+/* article .formulario .botoesCores .*/
+.verde {
     background-color: #92eb34;
 }
 
-article .formulario .botoesCores .rosa {
+.rosa {
     background-color: #f79fbe;
 }
 
-article .formulario .botoesCores .azul {
+.azul {
     background-color: #84b6f4;
 }
 
-article .formulario .botoesCores .laranja {
+.laranja {
     background-color: #ff742e;
 }
 
-article .formulario .botoesCores .amarelo {
+.amarelo {
     background-color: #ffd724;
 }
 
-article .formulario .botoesCores .roxo {
+.roxo {
     background-color: #d375ff;
 }
 
@@ -158,22 +159,21 @@ article .overlay {
 }
 
 article .containerCards {
+    /* As 3 linhas de codigo seguintes fazem com que a medida com que os elementos vão sendo adicionados eles vão para a linha de baixo */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: auto;
-    background-color: #84b6f4;
+    justify-content: flex-start;
     margin-top: 20px;
-    margin-right: 25px;
-    margin-left: 5px;
-    height: 400px;
+    margin-left: 50px;
     padding: 15px;
 }
 
 article .containerCards .card1 {
-    width: 300px;
-    height: 200px;
-    background-color: white;
+    margin-top: 25px;
+    margin-right: 25px;
+
+    width: 250px;
+    height: 215px;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -191,6 +191,10 @@ article .containerCards .card1 .cabecalho button {
     background-color: transparent;
     color: white;
 
+}
+
+article .containerCards .card1 .corpo {
+    height: 150px;
 }
 
 article .containerCards .card1 .corpo .tituloCard h1 {
@@ -213,6 +217,16 @@ article .containerCards .card1 .corpo .paragrafo {
     padding-right: 20px;
 }
 
-article .containerCards .card1 .rodape{
-     margin-bottom: 0px;
+article .containerCards .card1 .rodape {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+    margin-right: 20px;
+
+
+}
+
+article .containerCards .card1 .rodape img {
+    height: 20px;
+    margin-bottom: 0px;
 }
