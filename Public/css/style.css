@@ -156,3 +156,63 @@ article .overlay {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
+
+article .containerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+    background-color: #84b6f4;
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 5px;
+    height: 400px;
+    padding: 15px;
+}
+
+article .containerCards .card1 {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+article .containerCards .card1 .cabecalho {
+    width: 100%;
+    background-color: red;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+article .containerCards .card1 .cabecalho button {
+    border: none;
+    background-color: transparent;
+    color: white;
+
+}
+
+article .containerCards .card1 .corpo .tituloCard h1 {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 10px;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+
+}
+
+article .containerCards .card1 .corpo .paragrafo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.8;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+article .containerCards .card1 .rodape{
+     margin-bottom: 0px;
+}
