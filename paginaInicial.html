@@ -26,18 +26,21 @@
     <!-- Fim do Menu -->
 
     <article>
+
+        <!-- Botão adicionar -->
         <div class="botao">
-            <button class="addTarefa" id="addTarefa">
+            <button class="abrirForm" id="abrirFormulario">
                 <img src="Public/assets/plus.png" alt="Imagem de adicionar">
             </button>
             <span>Adicionar Tarefa</span>
         </div>
+
+        <!-- Parte correspondente ao formulário -->
         <div class="formulario" id="formulario">
             <div class="modalCabecalho">
                 <h1>Adicione sua tarefa</h1>
-                <button type="button" class="fechar" id="fechar">X</button>
+                <button type="button" class="fechar" id="fecharFormulario">X</button>
             </div>
-
             <form method="post">
                 <div class="form-group">
                     <label for="titulo">Nome da Tarefa:</label>
@@ -51,7 +54,6 @@
                 </div>
                 <div class="botoesCores">
                     <label for="cor" class="margem">Cor:</label>
-                    <button class="verde " id="verde"></button>
                     <button class="rosa" id="rosa"></button>
                     <button class="azul" id="azul"></button>
                     <button class="laranja" id="laranja"></button>
@@ -59,34 +61,12 @@
                     <button class="roxo" id="roxo"></button>
                 </div>
                 <div class="divBotaoEnviar">
-                    <button type="submit" class="botaoEnviar">Add tarefa</button>
+                    <button type="submit" class="botaoEnviar" id="cadastrarCard">Add tarefa</button>
                 </div>
             </form>
         </div>
 
         <div class="containerCards">
-            <div class="verde card1">
-                <div class="cabecalho">
-                    <button class="naoConcluido" id="naoConcluido">
-                        <img src="Public/assets/naoConcluido.png" alt="Icone não concluido">
-                        <span>Não concluido</span>
-                    </button>
-                </div>
-                <div class="corpo">
-                    <div class="tituloCard">
-                        <h1>Estudar Programação</h1>
-                    </div>
-                    <div class="paragrafo">
-                        <p>Estudar o Document Object Model;
-                            Praticar o Angular;
-                            Estudar CSS e HTML
-                        </p>
-                    </div>
-                </div>
-                <div class="rodape">
-                    <img src="Public/assets/arquivado.png" alt="Arquivado">
-                </div>
-            </div>
 
             <!-- Card 2 -->
             <div class="rosa card1">
@@ -99,6 +79,7 @@
                 <div class="corpo">
                     <div class="tituloCard">
                         <h1>Estudar Programação</h1>
+
                     </div>
                     <div class="paragrafo">
                         <p>Estudar o Document Object Model;

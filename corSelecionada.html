@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="botoesCores">
+        <label for="cor" class="margem">Cor:</label>
+        <button class="rosa" id="rosa"></button>
+        <button class="azul" id="azul"></button>
+        <button class="laranja" id="laranja"></button>
+        <button class="amarelo" id="amarelo"></button>
+        <button class="roxo" id="roxo"></button>
+    </div>
+    <script>
+        var botoesCores = document.querySelectorAll('.botoesCores button');
+    
+        function selecionarCor(corSelecionada) {
+            console.log("Usuário selecionou a cor:", corSelecionada);
+            // Aqui você pode realizar outras ações com a cor selecionada, como aplicá-la a um card.
+        }
+    
+        // Adicionando ouvintes de eventos a cada botão
+        botoesCores.forEach(function(botao) {
+            botao.addEventListener('click', function() {
+                var corSelecionada = botao.id;
+                selecionarCor(corSelecionada);
+            });
+        });
+    </script>    
+</body>
+</html>

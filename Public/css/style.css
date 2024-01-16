@@ -41,7 +41,7 @@ article {
     margin-left: 40px;
 }
 
-article .botao .addTarefa {
+article .botao .abrirForm {
     background-color: #92eb34;
     border: none;
     border-radius: 24px;
@@ -107,16 +107,14 @@ article .formulario .botoesCores button {
 }
 
 /* article .formulario .botoesCores .*/
-.verde {
-    background-color: #92eb34;
-}
+
 
 .rosa {
-    background-color: #f79fbe;
+    background-color: #ff7aa9;
 }
 
 .azul {
-    background-color: #84b6f4;
+    background-color: #4cb9fc;
 }
 
 .laranja {
@@ -124,11 +122,11 @@ article .formulario .botoesCores button {
 }
 
 .amarelo {
-    background-color: #ffd724;
+    background-color: #ffe121;
 }
 
 .roxo {
-    background-color: #d375ff;
+    background-color: #be33ff;
 }
 
 article .formulario .divBotaoEnviar {
@@ -169,11 +167,11 @@ article .containerCards {
 }
 
 article .containerCards .card1 {
+    color: white;
     margin-top: 25px;
     margin-right: 25px;
-
     width: 250px;
-    height: 215px;
+    height: 225px;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -181,7 +179,7 @@ article .containerCards .card1 {
 
 article .containerCards .card1 .cabecalho {
     width: 100%;
-    background-color: red;
+    background-color: #fa2525;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -194,13 +192,14 @@ article .containerCards .card1 .cabecalho button {
 }
 
 article .containerCards .card1 .corpo {
-    height: 150px;
+    height: 160px;
 }
 
 article .containerCards .card1 .corpo .tituloCard h1 {
     font-size: 18px;
     padding-top: 20px;
     padding-left: 10px;
+    margin-bottom: 20px;
     text-align: justify;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
