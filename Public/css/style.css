@@ -166,8 +166,8 @@ article .containerCards {
     padding: 15px;
 }
 
-article .containerCards .card1 {
-    color: white;
+.card1 {
+    color: black;
     margin-top: 25px;
     margin-right: 25px;
     width: 250px;

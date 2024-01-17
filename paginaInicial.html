@@ -44,12 +44,12 @@
             <form method="post">
                 <div class="form-group">
                     <label for="titulo">Nome da Tarefa:</label>
-                    <input type="text" id="titulo" class=" margem form-control titulo"
+                    <input type="text" id="tituloCard" class=" margem form-control titulo"
                         placeholder="Digite aqui o nome da tarefa &#128522;">
                 </div>
                 <div class="form-group">
                     <label for="descricao">Descrição: </label>
-                    <textarea class=" margem form-control" id="descricao" rows="3"
+                    <textarea class=" margem form-control" id="descricaoCard" rows="3"
                         placeholder="A vida é cheia de tarefas dirárias  que se não organizamos acabamos perdendo o prazo para realiza-las. Detalhe aqui as tarefas que você deve fazer  &#x1F4DD;"></textarea>
                 </div>
                 <div class="botoesCores">
@@ -61,15 +61,15 @@
                     <button class="roxo" id="roxo"></button>
                 </div>
                 <div class="divBotaoEnviar">
-                    <button type="submit" class="botaoEnviar" id="cadastrarCard">Add tarefa</button>
+                    <button class="botaoEnviar" id="botaoCadastrarCard">Add tarefa</button>
                 </div>
             </form>
         </div>
 
-        <div class="containerCards">
+        <div class="containerCards" id="containerCards">
 
             <!-- Card 2 -->
-            <div class="rosa card1">
+            <!-- <div class="rosa card1">
                 <div class="cabecalho">
                     <button class="naoConcluido" id="naoConcluido">
                         <img src="Public/assets/naoConcluido.png" alt="Icone não concluido">
@@ -91,109 +91,13 @@
                 <div class="rodape">
                     <img src="Public/assets/arquivado.png" alt="Arquivado">
                 </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="azul card1">
-                <div class="cabecalho">
-                    <button class="naoConcluido" id="naoConcluido">
-                        <img src="Public/assets/naoConcluido.png" alt="Icone não concluido">
-                        <span>Não concluido</span>
-                    </button>
-                </div>
-                <div class="corpo">
-                    <div class="tituloCard">
-                        <h1>Estudar Programação</h1>
-                    </div>
-                    <div class="paragrafo">
-                        <p>Estudar o Document Object Model;
-                            Praticar o Angular;
-                            Estudar CSS e HTML
-                        </p>
-                    </div>
-                </div>
-                <div class="rodape">
-                    <img src="Public/assets/arquivado.png" alt="Arquivado">
-                </div>
-            </div>
+            </div> -->
 
 
-            <!-- Card 4 -->
-            <div class="laranja card1">
-                <div class="cabecalho">
-                    <button class="naoConcluido" id="naoConcluido">
-                        <img src="Public/assets/naoConcluido.png" alt="Icone não concluido">
-                        <span>Não concluido</span>
-                    </button>
-                </div>
-                <div class="corpo">
-                    <div class="tituloCard">
-                        <h1>Estudar Programação</h1>
-                    </div>
-                    <div class="paragrafo">
-                        <p>Estudar o Document Object Model;
-                            Praticar o Angular;
-                            Estudar CSS e HTML
-                        </p>
-                    </div>
-                </div>
-                <div class="rodape">
-                    <img src="Public/assets/arquivado.png" alt="Arquivado">
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="amarelo card1">
-                <div class="cabecalho">
-                    <button class="naoConcluido" id="naoConcluido">
-                        <img src="Public/assets/naoConcluido.png" alt="Icone não concluido">
-                        <span>Não concluido</span>
-                    </button>
-                </div>
-                <div class="corpo">
-                    <div class="tituloCard">
-                        <h1>Estudar Programação</h1>
-                    </div>
-                    <div class="paragrafo">
-                        <p>Estudar o Document Object Model;
-                            Praticar o Angular;
-                            Estudar CSS e HTML
-                        </p>
-                    </div>
-                </div>
-                <div class="rodape">
-                    <img src="Public/assets/arquivado.png" alt="Arquivado">
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="roxo card1">
-                <div class="cabecalho">
-                    <button class="naoConcluido" id="naoConcluido">
-                        <img src="Public/assets/naoConcluido.png" alt="Icone não concluido">
-                        <span>Não concluido</span>
-                    </button>
-                </div>
-                <div class="corpo">
-                    <div class="tituloCard">
-                        <h1>Estudar Programação</h1>
-                    </div>
-                    <div class="paragrafo">
-                        <p>Estudar o Document Object Model;
-                            Praticar o Angular;
-                            Estudar CSS e HTML
-                        </p>
-                    </div>
-                </div>
-                <div class="rodape">
-                    <img src="Public/assets/arquivado.png" alt="Arquivado">
-                </div>
-            </div>
+        </div>
 
 
-
-
-            <div id="overlay" class="overlay"></div>
+        <div id="overlay" class="overlay"></div>
         </div>
     </article>
     <!-- Importando o arquivo js -->
