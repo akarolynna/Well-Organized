@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@600&family=Roboto:wght@400;500&display=swap');
 
-
 header {
     display: flex;
     width: auto;
@@ -106,9 +105,7 @@ article .formulario .botoesCores button {
     margin-left: 5px;
 }
 
-/* article .formulario .botoesCores .*/
-
-
+/* Botões de seleção das cores */
 .rosa {
     background-color: #ff7aa9;
 }
@@ -166,16 +163,16 @@ article .containerCards {
     padding: 15px;
 }
 
-.card1 {
+article .containerCards .card1 {
     color: black;
     margin-top: 25px;
     margin-right: 25px;
     width: 250px;
-    height: 225px;
+    height: auto;
+    min-height: 225px;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 article .containerCards .card1 .cabecalho {
     width: 100%;
@@ -188,11 +185,11 @@ article .containerCards .card1 .cabecalho button {
     border: none;
     background-color: transparent;
     color: white;
-
 }
 
 article .containerCards .card1 .corpo {
-    height: 160px;
+    box-sizing: border-box;
+    height: auto;
 }
 
 article .containerCards .card1 .corpo .tituloCard h1 {
@@ -204,7 +201,6 @@ article .containerCards .card1 .corpo .tituloCard h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     box-sizing: border-box;
-
 }
 
 article .containerCards .card1 .corpo .paragrafo {
@@ -221,8 +217,6 @@ article .containerCards .card1 .rodape {
     justify-content: flex-end;
     margin-bottom: 0px;
     margin-right: 20px;
-
-
 }
 
 article .containerCards .card1 .rodape img {

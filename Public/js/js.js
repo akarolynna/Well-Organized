@@ -31,7 +31,7 @@ function fecharFormulario() {
 function limparFormulario() {
     document.getElementById("tituloCard").value = "";
     document.getElementById("descricaoCard").value = "";
-    corSelecionada = "";
+
 }
 
 
@@ -45,11 +45,18 @@ function cadastrarCard(event) {
 
     var card = document.createElement("div");
     var containerCards = document.getElementById("containerCards");
-    card.classList.add("card1");
 
     // Adiciona classe da cor selecionada
+    
+    
+    
+    
+    
+    
     card.classList.add(corSelecionada);
+    card.classList.add("card1");
 
+    // card.classList.add(corSelecionada);
     var esqueleto = `
     <div class="cabecalho">
         <button class="naoConcluido" id="naoConcluido">
