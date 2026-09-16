@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.notas{
+    background-color: #fbf7f4;
+    width:100%;
+    max-width: 1920px; 
+    min-height: 100dvh; /* Garante no mínimo a altura da tela inteira */
+    margin-left: auto;
+    margin-right: auto; /*auto -> centralizando o container na tela */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; 
+}
+.notas .cabecalho{
+    min-height: 10rem;
+    display: flex;
+    align-items:center ;
+   
+}
+
+.notas .cabecalho .imagem{
+    width: 8.25rem;
+    height: 5.0625rem;
+  
+}
+.notas .cabecalho .imagem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.notas .cabecalho  .informacoes .titulo, .descricao{
+    margin: 1px;
+}
+
+.notas .formulario{
+    min-height: 8rem;
+    background-color: #f4f5f6 !important;
+    padding: 1.825rem;
+}
+.notas .formulario .formularioNotas{
+    display: flex;
+    align-items: center;
+
+}
+
+.notas .formulario .formularioNotas .anotacao{
+    width: 31.25rem;
+    height: 6.0625rem;
+    border-radius: 0.3rem;
+    padding: 0.850rem;
+    margin-right: 3rem;
+}
+.notas .formulario .formularioNotas .cores {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem; 
+}
+.notas .formulario .formularioNotas .cores div{
+    width: 30px;
+    height: 30px;
+    border-radius: 0.175rem;
+
+}
+.amarelo{
+    background-color:#fdeab7 ;
+}
+.rosa{
+    background-color:#fdc2d1 ;
+}
+.roxo{
+    background-color: #d2c2fb;
+}
+.azul{
+    background-color: #b6d6fd;
+}
+.verde_claro{
+    background-color: #b6e7cf;
+}
+.laranja{
+    background-color: #fdd0a9;
+}
+.verde_agua{
+    background-color: #9ee7e0 ;
+}
+.cinza{
+    background-color: #ced4df;
+}
