@@ -1,3 +1,4 @@
+/*Use o height (altura exata) quando o elemento precisar ter um tamanho fixo e rígido, e use o min-height (altura mínima) quando o elemento precisar crescer caso haja muito conteúdo. */
 * {
     margin: 0;
     padding: 0;
@@ -57,14 +58,59 @@
     align-items: center;
     padding-right: 1rem; 
 }
-.notas .formulario .formularioNotas .cores div{
-    width: 30px;
-    height: 30px;
-    border-radius: 0.175rem;
 
+.notas .formulario .formularioNotas label {
+    margin-right: 0.250rem;
 }
+.notas .formulario .formularioNotas .cores div{
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 0.175rem;  
+    margin-right: 0.250rem;
+    cursor: pointer;
+}
+
+.notas .formulario .formularioNotas .btnEnviar{
+    width: 8rem;
+    height:1.875rem ;
+    background-color: #96adf1;
+    border-radius: 0.275rem;
+    border-color: transparent;
+}
+
+.notas_registradas{
+    min-height: 37rem;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-wrap: wrap; /*Quebra os elementos para a próxima linha quando falta espaço*/
+    gap: 1rem;/* Cria um espço entre os cards, para que um não fique colado no outro*/
+}
+
+.notas_registradas .cardNota{
+    width: 20rem;
+    height: 15rem;
+    background-color: pink;
+    padding: 1rem;
+    border-radius: 0.350rem;
+}
+.notas_registradas .cardNota .corpoCard{
+    height:10rem;
+    margin-top: 1rem;
+    overflow-y: auto;   /* Adiciona a rolagem apenas quando o texto passar de 200px */
+    word-wrap: break-word;   /* Garante que o texto quebre a linha e não suma para o lado */
+}
+.notas_registradas .cardNota .corpoCard p{
+margin-top: 0;
+margin-bottom: 1rem;
+line-height: 1.50rem;
+text-align: justify;
+font-size: 1.10rem;
+}
+
 .amarelo{
     background-color:#fdeab7 ;
+    
 }
 .rosa{
     background-color:#fdc2d1 ;
