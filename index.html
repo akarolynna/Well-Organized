@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Well-Organized</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
@@ -23,19 +24,33 @@
                 <textarea type="text" class="anotacao" id="anotacao" placeholder="Digite suas anotações..."></textarea>
                 <label for="cores">Escolha a cor:</label>
                 <div class="cores" id="cores">
-                    <div class="amarelo"></div>
-                    <div class="rosa"></div>
-                    <div class="roxo"></div>
-                    <div class="azul"></div>
-                    <div class="verde_claro"></div>
-                    <div class="laranja"></div>
-                    <div class="verde_agua"></div>
-                    <div class="cinza"></div>
+                    <div class="amarelo" id="amarelo"></div>
+                    <div class="rosa" id="rosa"></div>
+                    <div class="roxo" id="roxo"></div>
+                    <div class="azul "id="azul" ></div>
+                    <div class="verde_claro" id="verde_claro"></div>
+                    <div class="laranja" id="laranja"></div>
+                    <div class="verde_agua" id="verde_agua"></div>
+                    <div class="cinza" id="cinza"></div>
                 </div>
                 <button type="submit" class="btnEnviar" id="btnEnviar">+ Adicionar</button>
             </form>
         </div>
-        <div class="notas_registradas"></div>
+        <div class="notas_registradas" id="notas_registradas">
+            <div class="cardNota">
+                <div class="cabecalhoCard">
+                    <input type="checkbox" class="notaRealizada" id="notaRealizada">
+                </div>
+                <div class="corpoCard">
+                    <p>Estudar para a Prova de Sistemas Operacionais.</p>
+                </div>
+                <div class="rodapeCard">
+                    <p><i class="bi bi-calendar" id="calendarioRodapeCard"></i>18/09/2026</p>
+                   <i class="bi bi-pencil" id="EditarRodapeCard"></i>
+                   <i class="bi bi-trash"  id="ExcluirRodapeCard"></i>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
