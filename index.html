@@ -21,107 +21,25 @@
         </div>
         <div class="formulario" id = "formulario">
             <form class="formularioNotas" id= "formularioNotas" method="post">
-                <input type="text" class="form-control anotacao" id="anotacao" placeholder="Digite suas anotações..."></textarea>
+                <input type="text" class="form-control anotacao" id="anotacao" placeholder="Digite suas anotações..." required="True"></textarea>
                 <label for="cores" >Escolha a cor:</label>
                 <div class="cores" id="cores">
-                    <div class="amarelo"></div>
-                    <div class="rosa"></div>
-                    <div class="roxo"></div>
-                    <div class="azul"></div>
-                    <div class="verde_claro"></div>
-                    <div class="laranja"></div>
-                    <div class="verde_agua"></div>
-                    <div class="cinza"></div>
+                    <div class="cor amarelo" data-cor="amarelo"></div>
+                    <div class="cor rosa"  data-cor="rosa"></div>
+                    <div class="cor roxo"  data-cor="roxo"></div>
+                    <div class="cor azul"  data-cor="azul"></div>
+                    <div class="cor verde_claro"  data-cor="verde_claro"></div>
+                    <div class="cor laranja"  data-cor="laranja"></div>
+                    <div class="cor verde_agua"  data-cor="verde_agua"></div>
+                    <div class="cor cinza"  data-cor="cinza"></div>
                 </div>
                 <button type="submit" class="btnEnviar " id="btnEnviar">+ Adicionar</button>
             </form>
         </div>
         <div class="notas_registradas">
-
-            <div class="cardNotas amarelo" id="cardNotas">
-                <div class="cabecalhoCardNotas ">
-                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas">
-                </div>
-                <div class="corpoCardNotas ">
-                    <p> Estudar para a prova de Sistemas de Informação. </p>
-                </div>
-                <div class="rodapeCardNotas">
-                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i> 22/09/2026</p>
-                    <i class="bi bi-pencil" id="editarCardNotas"></i>
-                    <i class="bi bi-trash" id="excluirCardNotas"></i>
-                </div>
-            </div>
-
-                <div class="cardNotas rosa" id="cardNotas">
-                <div class="cabecalhoCardNotas ">
-                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas">
-                </div>
-                <div class="corpoCardNotas ">
-                    <p> Comprar o presente de aniversário da minha mãe. </p>
-                </div>
-                <div class="rodapeCardNotas">
-                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i> 22/09/2026</p>
-                    <i class="bi bi-pencil" id="editarCardNotas"></i>
-                    <i class="bi bi-trash" id="excluirCardNotas"></i>
-                </div>
-            </div>
-
-              <div class="cardNotas roxo" id="cardNotas">
-                <div class="cabecalhoCardNotas ">
-                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas">
-                </div>
-                <div class="corpoCardNotas ">
-                    <p> Ler um capítulo do livro.  </p>
-                </div>
-                <div class="rodapeCardNotas">
-                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i> 22/09/2026</p>
-                    <i class="bi bi-pencil" id="editarCardNotas"></i>
-                    <i class="bi bi-trash" id="excluirCardNotas"></i>
-                </div>
-            </div>
-
-              <div class="cardNotas azul" id="cardNotas">
-                <div class="cabecalhoCardNotas ">
-                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas">
-                </div>
-                <div class="corpoCardNotas ">
-                    <p> Organizar o Quarto.  </p>
-                </div>
-                <div class="rodapeCardNotas">
-                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i> 22/09/2026</p>
-                    <i class="bi bi-pencil" id="editarCardNotas"></i>
-                    <i class="bi bi-trash" id="excluirCardNotas"></i>
-                </div>
-            </div>
-
-             <div class="cardNotas verde_claro" id="cardNotas">
-                <div class="cabecalhoCardNotas ">
-                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas">
-                </div>
-                <div class="corpoCardNotas ">
-                    <p> Fazer exercícios físicos.  </p>
-                </div>
-                <div class="rodapeCardNotas">
-                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i> 22/09/2026</p>
-                    <i class="bi bi-pencil" id="editarCardNotas"></i>
-                    <i class="bi bi-trash" id="excluirCardNotas"></i>
-                </div>
-            </div>
-            
-             <div class="cardNotas laranja" id="cardNotas">
-                <div class="cabecalhoCardNotas ">
-                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas">
-                </div>
-                <div class="corpoCardNotas ">
-                    <p> Planejar Viagem.  </p>
-                </div>
-                <div class="rodapeCardNotas">
-                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i> 22/09/2026</p>
-                    <i class="bi bi-pencil" id="editarCardNotas"></i>
-                    <i class="bi bi-trash" id="excluirCardNotas"></i>
-                </div>
-            </div>
         </div>
     </section>
+
+    <script src="JS/js.js"></script>
 </body>
 </html>
