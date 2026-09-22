@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box; 
 }
+
 .notas{
     background-color: #fbf7f4;
     width:100%;
@@ -13,65 +14,80 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem; 
 }
+
 .notas .cabecalho{
     min-height: 10rem;
     display: flex;
     align-items:center ;
-   
 }
 
 .notas .cabecalho .imagem{
     width: 8.25rem;
     height: 5.0625rem;
-  
 }
+
 .notas .cabecalho .imagem img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .notas .cabecalho  .informacoes .titulo, .descricao{
     margin: 1px;
 }
 
 .notas .formulario{
-    min-height: 8rem;
+    width: 113rem;
+    min-height: 7rem;
     background-color: #f4f5f6 !important;
     padding: 1.825rem;
+    border-radius: 1rem;
+    border:1px solid rgb(221, 219, 219);
 }
+
+
 .notas .formulario .formularioNotas{
     display: flex;
     align-items: center;
-
+    
 }
 
 .notas .formulario .formularioNotas .anotacao{
-    width: 31.25rem;
-    height: 6.0625rem;
-    border-radius: 0.3rem;
-    padding: 0.850rem;
+    width: 67rem;
+    /* height: 6.0625rem; */
+    border-radius: 0.450rem;
+    padding: 0.525rem;
     margin-right: 3rem;
 }
+
+.notas .formulario .formularioNotas label{
+    margin-right: 1rem;
+}
+
 .notas .formulario .formularioNotas .cores {
     display: flex;
     align-items: center;
     padding-right: 1rem; 
+   
 }
+
 .notas .formulario .formularioNotas .cores div{
     width: 1.875rem;
     height: 1.875rem;
     border-radius: 0.175rem;
     margin: 0.225rem;
     cursor:pointer;
+
 }
 
 .notas .formulario .formularioNotas  .btnEnviar{
-    width:6rem;
-    height: 1.875rem;
+    width: 8rem;
+    height: 2.1rem;
     color: white;
     border-color: transparent;
     border-radius: 0.225rem;
     background-color: #96aff1;
+    font-weight: bold;
 }
 
 .notas_registradas{
@@ -81,14 +97,18 @@
     margin-top: 3rem;
 }
 
-.notas_registradas .cardNotas{
+.notas_registradas .cardNotas{ 
     width: 21rem;
     min-height: 13rem;
+    cursor:pointer;
     box-sizing: border-box;
     overflow: hidden;
     border-radius:0.525rem;
     padding:1rem 1rem 0.500rem 1rem; /* top + right + bottom + left*/
+    box-shadow: 0 4px 10px rgba(219, 215, 215, 0.1);
+
 }
+
 .notas_registradas .cardNotas .cabecalhoCardNotas .checkboxNotasRalizadas{
     width: 1.15rem;
     height: 1.15rem;
@@ -109,19 +129,22 @@
     line-height: 2rem;
     text-align: justify;
 }
+
 .notas_registradas .cardNotas  .rodapeCardNotas{
     display: flex;
     justify-content: space-around;
-    height:2rem;
-    
+    height:2rem; 
 }
+
  .cardNotas  .rodapeCardNotas  p{
     margin-right: 8rem;
  }
 
  .cardNotas  .rodapeCardNotas #editarCardNotas, #excluirCardNotas{
     cursor: pointer;
+    
 }
+
 .amarelo{
     background-color:#fdeab7 ;
 }
