@@ -58,20 +58,75 @@
     padding-right: 1rem; 
 }
 .notas .formulario .formularioNotas .cores div{
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     border-radius: 0.175rem;
     margin: 0.225rem;
-}
-..otas .formulario .formularioNotas .btnEnviar{
-
+    cursor:pointer;
 }
 
+.notas .formulario .formularioNotas  .btnEnviar{
+    width:6rem;
+    height: 1.875rem;
+    color: white;
+    border-color: transparent;
+    border-radius: 0.225rem;
+    background-color: #96aff1;
+}
+
+.notas_registradas{
+    display: flex;
+    flex-wrap: wrap;  /*Permite quebrr para a próxima linha.*/
+    gap: 2rem; /* Espaço entre os cards*/
+    margin-top: 3rem;
+}
+
+.notas_registradas .cardNotas{
+    width: 21rem;
+    min-height: 13rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius:0.525rem;
+    padding:1rem 1rem 0.500rem 1rem; /* top + right + bottom + left*/
+}
+.notas_registradas .cardNotas .cabecalhoCardNotas .checkboxNotasRalizadas{
+    width: 1.15rem;
+    height: 1.15rem;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+
+.notas_registradas .cardNotas  .corpoCardNotas{
+    width:100%;
+    height: 8rem;
+    margin-top:1rem;
+    overflow-y: auto;
+    box-sizing: border-box;
+    
+}
+
+.notas_registradas .cardNotas  .corpoCardNotas p{
+    line-height: 2rem;
+    text-align: justify;
+}
+.notas_registradas .cardNotas  .rodapeCardNotas{
+    display: flex;
+    justify-content: space-around;
+    height:2rem;
+    
+}
+ .cardNotas  .rodapeCardNotas  p{
+    margin-right: 8rem;
+ }
+
+ .cardNotas  .rodapeCardNotas #editarCardNotas, #excluirCardNotas{
+    cursor: pointer;
+}
 .amarelo{
     background-color:#fdeab7 ;
 }
 .rosa{
-    background-color:#fdc2d1 ;
+    background-color:#ebb3bf ;
 }
 .roxo{
     background-color: #d2c2fb;
