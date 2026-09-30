@@ -49,7 +49,7 @@ Se for false, não coloque nada.-->
             `;
         notasRegistradas.innerHTML += cartaoNotas;
     }
-       
+
 
 }
 
@@ -68,16 +68,41 @@ formulario.addEventListener("submit", enviarFormulario);
 function enviarFormulario(evento) { //evento vem automáticamente pelo navegador
     evento.preventDefault(); // faz com que o navegador não recarregue novamente a página.
 
-    const notas = {
-        id: idCard,
-        texto: inputNotas.value,
-        cor: corEscolhida,
-        concluida: false
+    if (idNotaEditando == null) {
+        const notas = {
+            id: idCard,
+            texto: inputNotas.value,
+            cor: corEscolhida,
+            concluida: false
+        }
+        idCard++;
+        vetorNotas.push(notas);
+        salvandoNoLocalStorage(vetorNotas);
+        mostrarNotas([notas]);
+    } else {
+        const dados = pegarDadosLocalStorage(); // pegando as notas no localStorage
+        const nota = dados.find(nota => nota.id == idNotaEditando); // procurando a nota que eu guardei anteriormente
+        nota.texto = inputNotas.value;
+        nota.cor = corEscolhida;
+
+        salvandoNoLocalStorage(dados);
+        //location.reload();
+        notasRegistradas.innerHTML = ""; //limpa os cards que estão desenhados na tela.
+        mostrarNotas(dados);
+        notasRegistradas.innerHTML = "";
+        mostrarNotas(dados);
+
+        /*
+        Adicionei novamente aos botoes eventos, pq os evt que estavam no antigo nao passam para o novo
+        */
+        procurandoQualCardFoiClicado(); 
+        checkboxMarcar();
+
+        idNotaEditando = null;
+        idNotaEditando = null;
+
     }
-    idCard++;
-    vetorNotas.push(notas);
-    salvandoNoLocalStorage(vetorNotas);
-    mostrarNotas([notas]);
+
     formulario.reset();
 
 
@@ -102,7 +127,7 @@ function procurandoQualCardFoiClicado() {
                 excluirCard(idAtual, cardClicado);
             } else if (botao.classList.contains("editarCardNotas")) {
                 console.log(`AÇÃO: Clique para Edição \nID: ${idAtual}`);
-                editarCards(idAtual);
+                entrandoNoModoEdicao(idAtual, cardClicado);
             }
 
         })
@@ -118,6 +143,14 @@ function excluirCard(idAtual, cardClicado) {
     }); // esta parte faz com que as notas sejam atualizadas no Banco e isso é importante, pq sem ela quando dou F5 a tela recarrega com a nota excluida ainda
     salvandoNoLocalStorage(novasNotas);
 
+}
+
+function entrandoNoModoEdicao(idAtual, cardClicado) {
+    const dados = pegarDadosLocalStorage();
+    const nota = dados.find(nota => nota.id == idAtual); // encontrando a nota, que queremos editar, no localStorage.
+    inputNotas.value = nota.texto; // assim pegamos a anotação que o usuario tem que fazer e o vaue nos permite jogar isso dentro do input do formulário.
+    idNotaEditando = idAtual; // aí eu sei quem eu estpu editando hehehehe
+    corEscolhida = nota.cor;
 }
 
 function checkboxMarcar() {
