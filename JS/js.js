@@ -2,10 +2,9 @@ const formulario = document.getElementById("formularioNotas");
 const inputNotas = document.getElementById("anotacao");
 const coresDisponiveis = document.querySelectorAll(".cor");
 const notasRegistradas = document.querySelector(".notas_registradas");
-
 const vetorNotas = [];
 let corEscolhida;
-
+let idNotaEditando = null;
 let idCard = 1;
 
 
@@ -13,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dados = pegarDadosLocalStorage();
     mostrarNotas(dados);
     procurandoQualCardFoiClicado();
+    checkboxMarcar();
 });
 
 
@@ -34,7 +34,8 @@ function mostrarNotas(dados) {
             `
          <div class="cardNotas ${dados[i].cor}" id="cardNotas" data-id="${dados[i].id}">
                 <div class="cabecalhoCardNotas ">
-                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas">
+                    <input type="checkbox" class="checkboxNotasRalizadas" id="checkboxNotasRalizadas" ${dados[i].concluida ? "checked" : ""}> <!--Se concluida for true, coloque checked.
+Se for false, não coloque nada.-->
                 </div>
                 <div class="corpoCardNotas ">
                     <p> ${dados[i].texto} </p>
@@ -48,6 +49,7 @@ function mostrarNotas(dados) {
             `;
         notasRegistradas.innerHTML += cartaoNotas;
     }
+       
 
 }
 
@@ -69,7 +71,8 @@ function enviarFormulario(evento) { //evento vem automáticamente pelo navegador
     const notas = {
         id: idCard,
         texto: inputNotas.value,
-        cor: corEscolhida
+        cor: corEscolhida,
+        concluida: false
     }
     idCard++;
     vetorNotas.push(notas);
@@ -99,7 +102,7 @@ function procurandoQualCardFoiClicado() {
                 excluirCard(idAtual, cardClicado);
             } else if (botao.classList.contains("editarCardNotas")) {
                 console.log(`AÇÃO: Clique para Edição \nID: ${idAtual}`);
-                editarCards(idAtual, cardClicado);
+                editarCards(idAtual);
             }
 
         })
@@ -115,4 +118,23 @@ function excluirCard(idAtual, cardClicado) {
     }); // esta parte faz com que as notas sejam atualizadas no Banco e isso é importante, pq sem ela quando dou F5 a tela recarrega com a nota excluida ainda
     salvandoNoLocalStorage(novasNotas);
 
+}
+
+function checkboxMarcar() {
+    const dados = pegarDadosLocalStorage();
+    const checkboxNotasRalizadas = document.querySelectorAll(".checkboxNotasRalizadas"); // garantindo que ee não inicialize como uma lista vazia.
+    checkboxNotasRalizadas.forEach(check => {
+        check.addEventListener("change", () => {
+            const cardClicado = check.closest(".cardNotas ")
+            const idAtual = cardClicado.dataset.id;
+            console.log("Card:", cardClicado);
+            console.log("ID:", idAtual);
+            console.log("Marcado:", check.checked);
+
+            const nota = dados.find(nota => nota.id == idAtual);
+
+            nota.concluida = check.checked;
+            salvandoNoLocalStorage(dados);
+        })
+    })
 }

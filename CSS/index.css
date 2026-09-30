@@ -37,7 +37,8 @@
 }
 
 .notas .formulario{
-    width: 113rem;
+    box-sizing: border-box; 
+    overflow: hidden;
     min-height: 7rem;
     background-color: #f4f5f6 !important;
     padding: 1.825rem;
@@ -82,6 +83,8 @@
 
 
 .notas .formulario .formularioNotas  .btnEnviar{
+    box-sizing: border-box; 
+    overflow: hidden;
     width: 8rem;
     height: 2.1rem;
     color: white;
@@ -109,13 +112,16 @@
     box-shadow: 0 4px 10px rgba(219, 215, 215, 0.1);
 
 }
-
+.notas_registradas .cardNotas:has(.checkboxNotasRalizadas:checked) p{
+      text-decoration: line-through;
+}
 .notas_registradas .cardNotas .cabecalhoCardNotas .checkboxNotasRalizadas{
     width: 1.15rem;
     height: 1.15rem;
     background-color: transparent !important;
     cursor: pointer;
 }
+
 
 .notas_registradas .cardNotas  .corpoCardNotas{
     width:100%;
