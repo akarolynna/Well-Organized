@@ -17,8 +17,8 @@ A colorful notes app for organizing ideas and tasks, built with vanilla HTML, CS
 | Desktop | Responsive |
 |---|---|
 | <img width="2106" height="1037" alt="site" src="https://github.com/user-attachments/assets/e0b541e9-ff90-41d4-b3a2-d8573c37e9ee" />
- | <img width="1277" height="1040" alt="site_responsivo" src="https://github.com/user-attachments/assets/2806756d-c949-4258-aa7e-e38d0b690089" />
  |
+ | <img width="1277" height="1040" alt="site_responsivo" src="https://github.com/user-attachments/assets/2806756d-c949-4258-aa7e-e38d0b690089" />
 
 ## Tech
 HTML5 · CSS3 · JavaScript (ES6) · Bootstrap Icons
