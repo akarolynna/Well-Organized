@@ -2,6 +2,7 @@ const formulario = document.getElementById("formularioNotas");
 const inputNotas = document.getElementById("anotacao");
 const coresDisponiveis = document.querySelectorAll(".cor");
 const notasRegistradas = document.querySelector(".notas_registradas");
+const btnEnviar = document.getElementById("btnEnviar");
 const vetorNotas = [];
 let corEscolhida;
 let idNotaEditando = null;
@@ -10,6 +11,9 @@ let idCard = 1;
 
 document.addEventListener("DOMContentLoaded", function () {
     const dados = pegarDadosLocalStorage();
+    if (dados.length > 0) {
+        idCard = dados[dados.length - 1].id + 1;
+    }
     mostrarNotas(dados);
     procurandoQualCardFoiClicado();
     checkboxMarcar();
@@ -41,7 +45,7 @@ Se for false, não coloque nada.-->
                     <p> ${dados[i].texto} </p>
                 </div>
                 <div class="rodapeCardNotas">
-                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i> 22/09/2026</p>
+                    <p><i class="bi bi-calendar-event" id="diaDaSemanaCardNotas"></i>${dados[i].data} </p>
                     <i class="bi bi-pencil editarCardNotas" id="editarCardNotas"></i>
                     <i class="bi bi-trash excluirCardNotas" id="excluirCardNotas"></i>
                 </div>
@@ -73,12 +77,21 @@ function enviarFormulario(evento) { //evento vem automáticamente pelo navegador
             id: idCard,
             texto: inputNotas.value,
             cor: corEscolhida,
-            concluida: false
+            concluida: false,
+            data: new Date().toLocaleDateString("pt-BR")
         }
         idCard++;
-        vetorNotas.push(notas);
-        salvandoNoLocalStorage(vetorNotas);
-        mostrarNotas([notas]);
+
+        const dados = pegarDadosLocalStorage();
+
+        dados.push(notas);
+
+        salvandoNoLocalStorage(dados);
+
+        notasRegistradas.innerHTML = "";
+        mostrarNotas(dados);
+        procurandoQualCardFoiClicado();
+        checkboxMarcar();
     } else {
         const dados = pegarDadosLocalStorage(); // pegando as notas no localStorage
         const nota = dados.find(nota => nota.id == idNotaEditando); // procurando a nota que eu guardei anteriormente
@@ -88,17 +101,15 @@ function enviarFormulario(evento) { //evento vem automáticamente pelo navegador
         salvandoNoLocalStorage(dados);
         //location.reload();
         notasRegistradas.innerHTML = ""; //limpa os cards que estão desenhados na tela.
+        btnEnviar.textContent = "+ Adicionar";
         mostrarNotas(dados);
-        notasRegistradas.innerHTML = "";
-        mostrarNotas(dados);
+
 
         /*
         Adicionei novamente aos botoes eventos, pq os evt que estavam no antigo nao passam para o novo
         */
-        procurandoQualCardFoiClicado(); 
+        procurandoQualCardFoiClicado();
         checkboxMarcar();
-
-        idNotaEditando = null;
         idNotaEditando = null;
 
     }
@@ -142,6 +153,11 @@ function excluirCard(idAtual, cardClicado) {
         return nota.id != idAtual;
     }); // esta parte faz com que as notas sejam atualizadas no Banco e isso é importante, pq sem ela quando dou F5 a tela recarrega com a nota excluida ainda
     salvandoNoLocalStorage(novasNotas);
+    notasRegistradas.innerHTML = "";
+    mostrarNotas(novasNotas);
+
+    procurandoQualCardFoiClicado();
+    checkboxMarcar();
 
 }
 
@@ -151,6 +167,7 @@ function entrandoNoModoEdicao(idAtual, cardClicado) {
     inputNotas.value = nota.texto; // assim pegamos a anotação que o usuario tem que fazer e o vaue nos permite jogar isso dentro do input do formulário.
     idNotaEditando = idAtual; // aí eu sei quem eu estpu editando hehehehe
     corEscolhida = nota.cor;
+    btnEnviar.textContent = "Editar";
 }
 
 function checkboxMarcar() {
