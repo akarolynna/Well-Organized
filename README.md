@@ -2,8 +2,10 @@
 
 A colorful notes app for organizing ideas and tasks, built with vanilla HTML, CSS, and JavaScript, featuring note creation, editing, deletion, completion tracking, color organization, and localStorage persistenc
 
-![Demo](<img width="1920" height="1040" alt="Well-Organized - Pessoal — Microsoft_ Edge 2026-10-01 21-32-03" src="https://github.com/user-attachments/assets/9ce3fea1-977a-42e1-bb7c-9f36a6dab404" />
-)
+💻 **Demo**
+
+<img width="1920" height="1040" alt="Well-Organized - Pessoal — Microsoft_ Edge 2026-10-01 21-32-03" src="https://github.com/user-attachments/assets/642ca488-6629-4200-b15c-75bad6ea0114" />
+
 
 🔗 **Live demo:** 
 
@@ -14,14 +16,12 @@ A colorful notes app for organizing ideas and tasks, built with vanilla HTML, CS
 - Responsive layout (desktop and mobile)
 
 ## Screenshots
-| Desktop | Responsive |
+| Desktop | Desktop Responsive |
 |---|---|
-| <img width="2106" height="1037" alt="site" src="https://github.com/user-attachments/assets/e0b541e9-ff90-41d4-b3a2-d8573c37e9ee" />
- |
- | <img width="1277" height="1040" alt="site_responsivo" src="https://github.com/user-attachments/assets/2806756d-c949-4258-aa7e-e38d0b690089" />
+| <img width="2106" height="1037" alt="site" src="https://github.com/user-attachments/assets/1953257a-285a-452c-a10a-9ff3e41a9233" /> | <img width="1277" height="1040" alt="site_responsivo" src="https://github.com/user-attachments/assets/73681ac5-427d-4271-945e-2b9256f05f77" />|
 
 ## Tech
-HTML5 · CSS3 · JavaScript (ES6) · Bootstrap Icons
+HTML5 · CSS3 · JavaScript · Bootstrap Icons
 
 ## Run locally
 1. Clone the repo
