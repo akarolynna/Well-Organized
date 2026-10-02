@@ -7,6 +7,7 @@ A colorful notes app for organizing ideas and tasks, built with vanilla HTML, CS
 <img width="1920" height="1040" alt="Well-Organized - Pessoal — Microsoft_ Edge 2026-10-01 21-32-03" src="https://github.com/user-attachments/assets/642ca488-6629-4200-b15c-75bad6ea0114" />
 
 
+
 🔗 **Live demo:**  https://akarolynna.github.io/Well-Organized/
 
 ## Features
