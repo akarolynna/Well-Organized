@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Well-Organized</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/index.css">
 </head>
+
 <body>
     <section class="notas" id="notas">
         <div class="cabecalho">
             <div class="imagem">
-                <img src="ASSETS/ICONES/Ícone de Nota Pastel com Destaques.png" alt="Ícone de Nota Pastel com Destaques">
+                <img src="ASSETS/ICONES/Ícone de Nota Pastel com Destaques.png"
+                    alt="Ícone de Nota Pastel com Destaques">
             </div>
             <div class="informacoes">
                 <h1 class="titulo">Minhas Notas</h1>
                 <p class="descricao">Organize suas ideias, tarefas e que for importante para você.</p>
             </div>
         </div>
-        <div class="formulario" id = "formulario">
-            <form class="formularioNotas" id= "formularioNotas" method="post">
-                <input type="text" class="form-control anotacao" id="anotacao" placeholder="Digite suas anotações..." required="True"></textarea>
-                <label for="cores" >Escolha a cor:</label>
+        <div class="formulario" id="formulario">
+            <form class="formularioNotas" id="formularioNotas" method="post">
+                <input type="text" class="form-control anotacao" id="anotacao" placeholder="Digite suas anotações..."
+                    required="True"></textarea>
+                <label for="cores">Escolha a cor:</label>
                 <div class="cores" id="cores">
                     <div class="cor amarelo" data-cor="amarelo"></div>
-                    <div class="cor rosa"  data-cor="rosa"></div>
-                    <div class="cor roxo"  data-cor="roxo"></div>
-                    <div class="cor azul"  data-cor="azul"></div>
-                    <div class="cor verde_claro"  data-cor="verde_claro"></div>
-                    <div class="cor laranja"  data-cor="laranja"></div>
-                    <div class="cor verde_agua"  data-cor="verde_agua"></div>
-                    <div class="cor cinza"  data-cor="cinza"></div>
+                    <div class="cor rosa" data-cor="rosa"></div>
+                    <div class="cor roxo" data-cor="roxo"></div>
+                    <div class="cor azul" data-cor="azul"></div>
+                    <div class="cor verde_claro" data-cor="verde_claro"></div>
+                    <div class="cor laranja" data-cor="laranja"></div>
+                    <div class="cor verde_agua" data-cor="verde_agua"></div>
+                    <div class="cor cinza" data-cor="cinza"></div>
                 </div>
                 <button type="submit" class="btnEnviar " id="btnEnviar">+ Adicionar</button>
             </form>
         </div>
-        <div class="notas_registradas">
+        <div class="cardsNotaa">
+            <div class="notas_registradas">
+            </div>
         </div>
+        <footer>
+            <small>Developed by Anna Karolynna M.C.A de Souza· 2026</small>
+        </footer>
     </section>
 
     <script src="JS/js.js"></script>
 </body>
+
 </html>

@@ -1,59 +1,62 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-.notas{
+.notas {
     background-color: #fbf7f4;
-    width:100%;
-    max-width: 1920px; 
-    min-height: 100dvh; /* Garante no mínimo a altura da tela inteira */
+    width: 100%;
+    max-width: 1920px;
+    min-height: 100dvh;
+    /* Garante no mínimo a altura da tela inteira */
     margin-left: auto;
-    margin-right: auto; /*auto -> centralizando o container na tela */
+    margin-right: auto;
+    /*auto -> centralizando o container na tela */
     padding-left: 1.5rem;
-    padding-right: 1.5rem; 
+    padding-right: 1.5rem;
 }
 
-.notas .cabecalho{
+.notas .cabecalho {
     min-height: 10rem;
     display: flex;
-    align-items:center ;
+    align-items: center;
 }
 
-.notas .cabecalho .imagem{
+.notas .cabecalho .imagem {
     width: 8.25rem;
     height: 5.0625rem;
 }
 
-.notas .cabecalho .imagem img{
+.notas .cabecalho .imagem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.notas .cabecalho  .informacoes .titulo, .descricao{
+.notas .cabecalho .informacoes .titulo,
+.descricao {
     margin: 1px;
 }
 
-.notas .formulario{
-    box-sizing: border-box; 
+.notas .formulario {
+    box-sizing: border-box;
     overflow: hidden;
     min-height: 7rem;
     background-color: #f4f5f6 !important;
     padding: 1.825rem;
     border-radius: 1rem;
-    border:1px solid rgb(221, 219, 219);
+    border: 1px solid rgb(221, 219, 219);
 }
 
 
-.notas .formulario .formularioNotas{
+.notas .formulario .formularioNotas {
     display: flex;
     align-items: center;
-    
+
 }
 
-.notas .formulario .formularioNotas .anotacao{
+.notas .formulario .formularioNotas .anotacao {
     width: 67rem;
     /* height: 6.0625rem; */
     border-radius: 0.450rem;
@@ -61,29 +64,29 @@
     margin-right: 3rem;
 }
 
-.notas .formulario .formularioNotas label{
+.notas .formulario .formularioNotas label {
     margin-right: 1rem;
 }
 
 .notas .formulario .formularioNotas .cores {
     display: flex;
     align-items: center;
-    padding-right: 1rem; 
-   
+    padding-right: 1rem;
+
 }
 
-.notas .formulario .formularioNotas .cores div{
+.notas .formulario .formularioNotas .cores div {
     width: 1.875rem;
     height: 1.875rem;
     border-radius: 0.175rem;
     margin: 0.225rem;
-    cursor:pointer;
+    cursor: pointer;
 
 }
 
 
-.notas .formulario .formularioNotas  .btnEnviar{
-    box-sizing: border-box; 
+.notas .formulario .formularioNotas .btnEnviar {
+    box-sizing: border-box;
     overflow: hidden;
     width: 8rem;
     height: 2.1rem;
@@ -94,28 +97,37 @@
     font-weight: bold;
 }
 
-.notas_registradas{
+.cardsNotaa {
+    min-height: 35rem;
+}
+
+.notas_registradas {
     display: flex;
-    flex-wrap: wrap;  /*Permite quebrr para a próxima linha.*/
-    gap: 2rem; /* Espaço entre os cards*/
+    flex-wrap: wrap;
+    /*Permite quebrr para a próxima linha.*/
+    gap: 2rem;
+    /* Espaço entre os cards*/
     margin-top: 3rem;
 }
 
-.notas_registradas .cardNotas{ 
+.notas_registradas .cardNotas {
     width: 21rem;
     min-height: 13rem;
-    cursor:pointer;
+    cursor: pointer;
     box-sizing: border-box;
     overflow: hidden;
-    border-radius:0.525rem;
-    padding:1rem 1rem 0.500rem 1rem; /* top + right + bottom + left*/
+    border-radius: 0.525rem;
+    padding: 1rem 1rem 0.500rem 1rem;
+    /* top + right + bottom + left*/
     box-shadow: 0 4px 10px rgba(219, 215, 215, 0.1);
 
 }
-.notas_registradas .cardNotas:has(.checkboxNotasRalizadas:checked) p{
-      text-decoration: line-through;
+
+.notas_registradas .cardNotas:has(.checkboxNotasRalizadas:checked) p {
+    text-decoration: line-through;
 }
-.notas_registradas .cardNotas .cabecalhoCardNotas .checkboxNotasRalizadas{
+
+.notas_registradas .cardNotas .cabecalhoCardNotas .checkboxNotasRalizadas {
     width: 1.15rem;
     height: 1.15rem;
     background-color: transparent !important;
@@ -123,56 +135,70 @@
 }
 
 
-.notas_registradas .cardNotas  .corpoCardNotas{
-    width:100%;
+.notas_registradas .cardNotas .corpoCardNotas {
+    width: 100%;
     height: 8rem;
-    margin-top:1rem;
+    margin-top: 1rem;
     overflow-y: auto;
     box-sizing: border-box;
-    
+
 }
 
-.notas_registradas .cardNotas  .corpoCardNotas p{
+.notas_registradas .cardNotas .corpoCardNotas p {
     line-height: 2rem;
     text-align: justify;
 }
 
-.notas_registradas .cardNotas  .rodapeCardNotas{
+.notas_registradas .cardNotas .rodapeCardNotas {
     display: flex;
     justify-content: space-around;
-    height:2rem; 
+    height: 2rem;
 }
 
- .cardNotas  .rodapeCardNotas  p{
+.cardNotas .rodapeCardNotas p {
     margin-right: 8rem;
- }
+}
 
- .cardNotas  .rodapeCardNotas #editarCardNotas, #excluirCardNotas{
+.cardNotas .rodapeCardNotas #editarCardNotas,
+#excluirCardNotas {
     cursor: pointer;
-    
+
 }
 
-.amarelo{
-    background-color:#fdeab7 ;
+footer {
+    margin-top: auto;
+    text-align: justify;
+    padding: 1.25rem;
 }
-.rosa{
-    background-color:#ebb3bf ;
+
+.amarelo {
+    background-color: #fdeab7;
 }
-.roxo{
+
+.rosa {
+    background-color: #ebb3bf;
+}
+
+.roxo {
     background-color: #d2c2fb;
 }
-.azul{
+
+.azul {
     background-color: #b6d6fd;
 }
-.verde_claro{
+
+.verde_claro {
     background-color: #b6e7cf;
 }
-.laranja{
+
+.laranja {
     background-color: #fdd0a9;
 }
-.verde_agua{
-    background-color: #9ee7e0 ;
+
+.verde_agua {
+    background-color: #9ee7e0;
 }
-.cinza{
+
+.cinza {
     background-color: #ced4df;
 }

@@ -165,7 +165,7 @@ function entrandoNoModoEdicao(idAtual, cardClicado) {
     const dados = pegarDadosLocalStorage();
     const nota = dados.find(nota => nota.id == idAtual); // encontrando a nota, que queremos editar, no localStorage.
     inputNotas.value = nota.texto; // assim pegamos a anotação que o usuario tem que fazer e o vaue nos permite jogar isso dentro do input do formulário.
-    idNotaEditando = idAtual; // aí eu sei quem eu estpu editando hehehehe
+    idNotaEditando = idAtual; // aí eu sei quem eu estou editando hehehehe
     corEscolhida = nota.cor;
     btnEnviar.textContent = "Editar";
 }
